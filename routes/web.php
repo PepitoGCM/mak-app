@@ -19,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/prueba/', function () {
-    return "Soy una prueba";
-});
+Route::get('bijouterie', [BijouterieController::class, 'index'])->name('bijouterie.index');
+Route::get('bijouterie/create', [BijouterieController::class, 'create'])->name('bijouterie.create');
+Route::get('bijouterie/{id}', [BijouterieController::class, 'show'])->name('bijouterie.show');

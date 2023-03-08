@@ -15,7 +15,8 @@ class BijouterieController extends Controller
      */
     public function index()
     {
-        //
+        $bijouteries = Bijouterie::paginate();
+        return view('bijouterie.index', compact('bijouteries'));
     }
 
     /**
@@ -45,9 +46,13 @@ class BijouterieController extends Controller
      * @param  \App\Models\Bijouterie  $bijouterie
      * @return \Illuminate\Http\Response
      */
-    public function show(Bijouterie $bijouterie)
+    public function show($id)
     {
         //
+
+        $bijouterie = Bijouterie::find($id);
+
+        return view('bijouterie.show', compact('bijouterie'));
     }
 
     /**

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <!-- Favicon -->
+
     <!-- CSS -->
+    
 </head>
 <body>
     <!-- Header -->
